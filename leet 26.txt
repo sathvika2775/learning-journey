@@ -1,0 +1,13 @@
+class Solution {
+    public int removeDuplicates(int[] nums) {
+        Set<Integer> s=new TreeSet<>();
+        for(int ele:nums){
+            s.add(ele);
+        }
+        int i=0;
+        for(int n:s){
+            nums[i++]=n;
+        }
+        return s.size();
+    }
+}
